@@ -20,11 +20,11 @@ public class EmployeeSwipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int empSwipeId;
-	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "HH:mm:ss")
+	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "dd-MM-yyyy HH:mm:ss")
 	@Temporal(value=TemporalType.TIME)
 	private Date empSwipeIn;
 	@Temporal(value=TemporalType.TIME)
-	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "HH:mm:ss")
+	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "dd-MM-yyyy HH:mm:ss")
 	private Date empSwipeOut;
 	@Temporal(value=TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "dd-MM-yyyy")
