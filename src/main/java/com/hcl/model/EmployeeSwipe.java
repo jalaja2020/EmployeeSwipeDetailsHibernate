@@ -2,7 +2,9 @@ package com.hcl.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,8 +34,8 @@ public class EmployeeSwipe {
 	
 	private String location;
 	
-	@ManyToOne
-	@JoinColumn(name="empId")
+	@ManyToOne( fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name="emp_Id")
 	Employee employee;
 	
 	public EmployeeSwipe() {
